@@ -25,6 +25,9 @@ function initAnimation(delay = 200) {
     
 }
 
-document.addEventListener("DOMContentLoaded", (event) => {
-    initAnimation();
+window.addEventListener("load", (event) => {
+    setTimeout(() => {
+        initAnimation();
+    }, 200);
+    
 });
