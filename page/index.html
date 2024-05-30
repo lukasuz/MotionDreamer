@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MotionDreamer">
+  <meta name="keywords" content="Animation, Video Diffusion Models, Zero-Shot">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MotionDreamer</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Press+Start+2P&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static/style.css">
+  <script type="text/javascript" src="static/script.js"></script>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 blue retro no-lower-margin drop-shadow">MotionDreamer</h1>
+            <h2 class="title is-3 black retro">Zero-Shot 3D Mesh Animation from Video Diffusion Models</h2>
+
+            <div class="is-size-5">
+              <span>
+                <a class="link green author-link" href="https://lukas.uzolas.com/">Lukas Uzolas</a>,</span>
+              <span>
+                <a class="link green author-link" href="https://graphics.tudelft.nl/~eisemann/">Elmar Eisemann</a>,</span>
+              <span>
+                <a class="link green author-link" href="https://kellnhofer.xyz/">Petr Kellnhofer</a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Delft University of Technology</span>
+            </div>
+
+            <div class="buffer-top">  
+                <span class="link-block">
+                  <a href="XXX" class="external-link button retro link button-link">
+                    <span>arXiv</span>
+                  </a>
+                </span>
+  
+                <span class="link-block">
+                  <a href="https://github.com/lukasuz/MotionDreamer" class="external-link button retro link button-link">
+                    <span>Code</span>
+                  </a>
+                </span>
+  
+              </div>
+
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+
+          <div class="level-left">
+            <div class="level-item">
+              <h2 id="welcome" class="title is-3 black italic">Welcome to</h2>
+            </div>
+            <div class="level-item">
+              <h2 class="title is-4 retro animated italic black">MotionDreamer</h2>
+            </div>
+          </div>
+          
+          <div class="content has-text-justified">
+            <p>
+              Animation techniques bring digital 3D worlds and characters to life.
+              However, manual animation is tedious and automated techniques are often specialized to narrow shape classes.
+              In our work, we propose a technique for automatic re-animation of arbitrary 3D shapes based on a motion prior extracted from a video diffusion model.
+              Unlike existing 4D generation methods, we focus solely on the motion, and we leverage an explicit mesh-based representation compatible with existing computer-graphics pipelines.
+              Furthermore, our utilization of diffusion features enhances accuracy of our motion fitting.
+              We analyze efficacy of these features for animation fitting and we experimentally validate our approach for two different diffusion models and four animation models.
+              Finally, we demonstrate that our time-efficient zero-shot method achieves a superior performance re-animating a diverse set of 3D shapes when compared to existing techniques in a user study.            </p>
+          </div>
+          
+            <!-- <div class="header-wrapper column is-centered">
+              <div class="header-window retro">
+                  A truck moving
+              </div>
+              <div class="body-window">
+  
+              </div>
+  
+            </div> -->
+          
+
+          <div class="content has-text-centered">
+            <video
+              muted
+              autoplay
+              playsinline
+              loop
+              width="60%"
+              class ="drop-shadow">
+              <source src="./static/imgs/lego.mp4"
+                      type="video/mp4">
+            </video>
+          </div> 
+          <h1 class="title is-4 black retro">Under construction...</h1>
+  
+        </div>
+      </div>
+    </div>
+
+
+      
+  
+  </section>
+
+</body>
+</html>
