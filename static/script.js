@@ -135,6 +135,7 @@ window.addEventListener("load", (event) => {
     }, 200);
 
     let vd = new VideoHandler();
-    vd.change_video();
+    vd.video.play();
+    // vd.change_video();
     
 });
