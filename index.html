@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MotionDreamer">
+  <meta name="keywords" content="Animation, Video Diffusion Models, Zero-Shot">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MotionDreamer</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Press+Start+2P&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static/style.css">
+  <script type="text/javascript" src="static/script.js"></script>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 is-size-3-mobile blue retro no-lower-margin drop-shadow">MotionDreamer</h1>
+            <h2 class="title is-3 is-size-5-mobile black retro">Zero-Shot 3D Mesh Animation from Video Diffusion Models</h2>
+
+            <div class="is-size-5">
+              <span>
+                <a class="link green author-link" href="https://lukas.uzolas.com/">Lukas Uzolas</a>,</span>
+              <span>
+                <a class="link green author-link" href="https://graphics.tudelft.nl/~eisemann/">Elmar Eisemann</a>,</span>
+              <span>
+                <a class="link green author-link" href="https://kellnhofer.xyz/">Petr Kellnhofer</a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Delft University of Technology</span>
+            </div>
+
+            <div class="buffer-top">  
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2405.20155" class="external-link button retro link button-link">
+                    <span>arXiv</span>
+                  </a>
+                </span>
+  
+                <span class="link-block">
+                  <a href="https://github.com/lukasuz/MotionDreamer" class="external-link button retro link button-link">
+                    <span>Code</span>
+                  </a>
+                </span>
+  
+              </div>
+
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+
+        <section class="section">
+
+          <div class="level-left">
+            <div class="level-item">
+              <h2 id="welcome" class="title is-3 black italic">Welcome to</h2>
+            </div>
+            <div class="level-item">
+              <h2 class="title is-4 retro animated italic black">MotionDreamer</h2>
+            </div>
+          </div>
+          
+          <div class="content has-text-justified">
+            <p>
+              Animation techniques bring digital 3D worlds and characters to life.
+              However, manual animation is tedious and automated techniques are often specialized to narrow shape classes.
+              In our work, we propose a technique for automatic re-animation of arbitrary 3D shapes based on a motion prior extracted from a video diffusion model.
+              Unlike existing 4D generation methods, we focus solely on the motion, and we leverage an explicit mesh-based representation compatible with existing computer-graphics pipelines.
+              Furthermore, our utilization of diffusion features enhances accuracy of our motion fitting.
+              We analyze efficacy of these features for animation fitting and we experimentally validate our approach for two different diffusion models and four animation models.
+              Finally, we demonstrate that our time-efficient zero-shot method achieves a superior performance re-animating a diverse set of 3D shapes when compared to existing techniques in a user study.            </p>
+          </div>
+
+        </section>
+        <br>
+      
+      <section class="section">
+        <div class="level-left">
+          <div class="level-item">
+            <h2 class="title is-4 black italic">Try it out yourself!</h2>
+            
+          </div>
+        </div>
+
+        <div class="content has-text-justified">
+          <p>Explore some looped examples of our method below. 
+          Push the <b class="blue retro" style="vertical-align: bottom">L</b> and <b class="red retro" style="vertical-align: bottom">R</b> buttons to cycle through the objects and animations. 
+            To change the camera view push <b class="yellow retro" style="vertical-align: bottom">V</b>. To toggle the single-view texturing press <b class="green retro" style="vertical-align: bottom">T</b>.
+            Note that textures are only available for a single view which is used for optimization (check the paper for details).
+          </p>
+
+          <!-- <p>The website is still under construction, more examples will be added in the future.</p> -->
+
+          <!-- <p><b class="blue">Note that the video sequences are uncurated</b>. Therefore, some of the generated animations do not always correspond to the input prompt or only partially due to the limitations of the underlying Video Diffusion Model.</p> -->
+        </div>
+
+        <div class="level-left">
+          <div class="level-item">
+            <p id="title_video" class="retro italic" style="font-size: 0.9em;">Truck (Motion Model: NJF)</p>
+          </div>
+        </div>
+
+        <div class="columns is-vcentered" id="video">
+          <div class="column" style="width: 100%; height: 100%;">
+              <video
+                muted
+                playsinline
+                loop
+                autoplay
+                class ="drop-shadow">
+                <source src="./static/videos/truck/geo1.mp4"
+                        type="video/mp4">
+              </video>
+          </div>
+
+          <div class="column is-one-third">
+              <table class="controller">
+                <tr>
+                  <th></th>
+                  <th style="width: 80px;"><div id ="button-T" class="my-button button-green drop-shadow">T</div><span class="animation-text">Texture</span></th>
+                  <th></th>
+                </tr>
+
+                <tr>
+                  <th><div id ="button-L" class="my-button button-blue drop-shadow">L</div><span class="animation-text">Left</span></th>
+                  <th style="width: 80px;"></th>
+                  <th><div id ="button-R" class="my-button button-red drop-shadow">R</div><span class="animation-text">Right</span></th>
+                </tr>
+
+                <tr>
+                  <th></th>
+                  <th style="width: 80px;"><div id ="button-V" class="my-button button-yellow drop-shadow">V</div><span class="animation-text">View</span></th>
+                  <th></th>
+                </tr>
+              </table>      
+          </div>
+        </div>
+        <div id="source_description">
+          <p class="dark-grey">Model source: <i><span id="source">Mioldenhall et al. 2020</span></i></p>
+        </div>
+
+
+
+        <div class="content has-text-justified">
+          <p>The website is still under construction, more information will be added in the future. 
+          </p>
+        </div>
+
+      
+      </section>
+
+      <br>
+
+
+      <section class="section">
+        <div class="level-left">
+          <div class="level-item">
+            <h2 class="title is-4 black italic pb-1">How does it work?</h2>
+          </div>
+        </div>
+
+      
+        <figure class="image drop-shadow pb-2">
+          <img src="static/imgs/method.png" />
+        </figure>
+
+        <div class="content has-text-justified">
+          <p>First, we automatically texture the input mesh <b class="italic">M</b> to reduce the domain gap to the VDM (Video Diffusion Model) prior.
+            Second, we condition the VDM by a rendered image <b class="italic">I<sub>rgb</sub></b> to produce a latent video with motion and to extract features <b class="italic">Â</b> for all <span class="italic">L</span> frames from its internal U-Net.
+            Finally, we reproject the input frame features <b class="italic">Â<sup>0</sup></b> on the mesh surface and we optimize mesh animation parameters <b class="italic">p</b> to match the reposed mesh features to the feature video.</p>
+        </div>
+
+        <div class="level-left">
+          <div class="level-item">
+            <h2 class="title is-4 black italic pb-1">BibTeX</h2>
+          </div>
+        </div>
+
+
+        <div class="has-text-left pb-4">
+          
+<pre>@article{uzolas2024motiondreamer,
+  title={MotionDreamer: Zero-Shot 3D Mesh Animation from Video Diffusion Models},
+  author={Uzolas, Lukas and Eisemann, Elmar and Kellnhofer, Petr},
+  journal={arXiv preprint arXiv:2405.20155},
+  year={2024}
+}</pre>
+        </div>
+
+        <!-- <div class="content has-text-justified">
+          <p></p>
+        </div>
+
+      
+        <div class="content has-text-centered">
+          <video
+            muted
+            autoplay
+            playsinline
+            loop
+            width="60%"
+            class ="drop-shadow">
+            <source src="./static/imgs/lego.mp4"
+                    type="video/mp4">
+          </video>
+        </div> 
+        <h1 class="title is-4 black retro">Under construction...</h1> -->
+
+      </section>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
