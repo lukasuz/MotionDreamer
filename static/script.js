@@ -130,12 +130,10 @@ class VideoHandler {
 }
 
 window.addEventListener("load", (event) => {
+    let vd = new VideoHandler();
     setTimeout(() => {
         initAnimation();
+        vd.video.play();
     }, 200);
-
-    let vd = new VideoHandler();
-    vd.video.play();
-    // vd.change_video();
     
 });
