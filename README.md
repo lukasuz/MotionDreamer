@@ -1,4 +1,4 @@
-## MotionDreamer Zero-Shot 3D Mesh Animation from Video Diffusion Models
+## MotionDreamer: Zero-Shot 3D Mesh Animation from Video Diffusion Models
 
 ![Header animation](./static/imgs/header.gif)
 
