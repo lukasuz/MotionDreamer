@@ -18,3 +18,18 @@ Animation techniques bring digital 3D worlds and characters to life. However, ma
 
 
 _Code coming soon._
+
+
+### Citation
+
+```
+@misc{uzolas2024motiondreamerexploringsemanticvideo,
+      title={MotionDreamer: Exploring Semantic Video Diffusion features for Zero-Shot 3D Mesh Animation}, 
+      author={Lukas Uzolas and Elmar Eisemann and Petr Kellnhofer},
+      year={2024},
+      eprint={2405.20155},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2405.20155}, 
+}
+```
