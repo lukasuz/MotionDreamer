@@ -1,0 +1,5 @@
+# This is a modified version of the Lego truck model originally available at:
+# https://www.matthewtancik.com/nerf
+#
+# Original work licensed under Creative Commons Attribution 3.0 Unported (CC BY 3.0)
+# https://creativecommons.org/licenses/by/3.0/

@@ -1,0 +1,8 @@
+# Stanford Bunny 3D Model
+# © 1996 Stanford University
+# License: Stanford Scan – https://graphics.stanford.edu/data/3Dscanrep/
+#
+# Original data created by Greg Turk and Marc Levoy at Stanford University.
+# Source: https://graphics.stanford.edu/data/3Dscanrep/#bunny
+#
+# Please attribute to: Greg Turk and Marc Levoy, Stanford University.

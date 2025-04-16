@@ -1,0 +1,9 @@
+[submodule "SMALify"]
+	path = SMALify
+	url = git@github.com:benjiebob/SMALify.git
+[submodule "NeuralJacobianFields"]
+	path = NeuralJacobianFields
+	url = git@github.com:ThibaultGROUEIX/NeuralJacobianFields.git
+[submodule "DynamiCrafter"]
+	path = DynamiCrafter
+	url = git@github.com:Doubiiu/DynamiCrafter.git
