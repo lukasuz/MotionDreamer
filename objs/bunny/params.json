@@ -1,0 +1,10 @@
+{
+    "object": "bunny",
+    "background": "garden",
+    "connect": false,
+    "retriangulate": false,
+    "dist": 1,
+    "elev": 30,
+    "y_offset": [0,0,0],
+    "azim_offset": 0
+}

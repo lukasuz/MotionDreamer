@@ -1,0 +1,10 @@
+{
+    "object": "yellow truck",
+    "background": "forest",
+    "connect": true, 
+    "retriangulate": false,
+    "dist": 1.4,
+    "elev": 20,
+    "y_offset": [0,0,0],
+    "azim_offset": 60
+}
