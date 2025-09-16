@@ -55,13 +55,12 @@ Please refer to each file’s header for specific licensing and copyright detail
 ## Citation
 
 ```
-@misc{uzolas2024motiondreamerexploringsemanticvideo,
-      title={MotionDreamer: Exploring Semantic Video Diffusion features for Zero-Shot 3D Mesh Animation}, 
-      author={Lukas Uzolas and Elmar Eisemann and Petr Kellnhofer},
-      year={2024},
-      eprint={2405.20155},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2405.20155}, 
+@inproceedings{uzolas2025motiondreamer,
+  title={Motiondreamer: Exploring semantic video diffusion features for zero-shot 3d mesh animation},
+  author={Uzolas, Lukas and Eisemann, Elmar and Kellnhofer, Petr},
+  booktitle={2025 International Conference on 3D Vision (3DV)},
+  pages={893--904},
+  year={2025},
+  organization={IEEE}
 }
 ```
